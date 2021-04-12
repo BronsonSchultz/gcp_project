@@ -19,6 +19,10 @@ public class Course {
 
     private String Description;
 
+    /**
+     * get course id
+     * @return id
+     */
     public Integer getId() {
         return id;
     }
