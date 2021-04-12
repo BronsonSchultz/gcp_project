@@ -13,8 +13,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping(path = "/")
 public class WebController {
 
+
     @Autowired
     private CourseRepo courseRepo;
+
+
+    @GetMapping("/")
+    public String root(){
+        return "redirect:/all";
+    }
 
     @PostMapping(path="/add")
     public @ResponseBody String addNewCourse(@RequestParam String subjectCode, @RequestParam int courseCode,@RequestParam String title, @RequestParam String description){
